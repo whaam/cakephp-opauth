@@ -242,7 +242,7 @@ class Services_Soundcloud
         $this->_persistance = $persistance;
         $this->_curlOptions = self::$_curlDefaultOptions;
         $this->_curlOptions[CURLOPT_USERAGENT] .= $this->_getUserAgent();
-error_log($this->_persistance);
+
         // read access token from session if persistance is true
         if($this->_persistance && isset($_SESSION['sc_access_token']))
             $this->setAccessToken($_SESSION['sc_access_token']);
